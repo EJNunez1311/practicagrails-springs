@@ -12,7 +12,8 @@ class BarcampController {
 
     @Secured(["ROLE_ADMIN"])
     def encuentas(){
-        Pregunta.save()
+        def respuesta = new Pregunta(params.Pregunta)
+        respuesta.save()
         render "Success!"
         // def user = springSecurityService.currentUser
     }
