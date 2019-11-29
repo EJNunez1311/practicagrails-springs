@@ -4,11 +4,10 @@
   Date: 11/29/2019
   Time: 9:10 AM
 --%>
-
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
-    <title>Encuentas Barcamp</title>s
+    <title>Encuesta BarCamp</title>
 </head>
 
 <body>
@@ -23,5 +22,8 @@
     <label> ¿Tiene algún comentario para los organizadores? (Comentario).</label>
     <g:textField name="Pregunta.respuesta4"/><br/>
     <g:actionSubmit value="Save"/>
+</g:form>
+</body>
+</html>
 </body>
 </html>
