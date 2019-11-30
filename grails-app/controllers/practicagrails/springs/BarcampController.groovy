@@ -8,19 +8,18 @@ import grails.plugin.springsecurity.annotation.Secured
 class BarcampController {
 
     def springSecurityService
+    SaveEncuestaService saveEncuestaService
+
 
     def index() {
-        Usuario usuario = springSecurityService.currentUser;
-        [usuario: usuario]
     }
     def encuentas(){
 
     }
-
-    def save(){
-        def respuesta = new Pregunta(params.Pregunta)
-        respuesta.save()
+    def save(Pregunta pregunta){
+        println "propiedades: "+params.properties
+      def UsuarioActual = (Usuario) springSecurityService.getCurrentUser()
+        saveEncuestaService.save(pregunta, UsuarioActual)
         render "Success!"
-        // def user = springSecurityService.currentUser
     }
 }

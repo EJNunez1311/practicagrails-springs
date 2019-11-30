@@ -12,7 +12,7 @@ class BootStrap {
 
         def adminRole = new Rol(authority: 'ROLE_ADMIN').save()
 
-        def testUser = new Usuario(username: 'me', password: 'password').save()
+        def testUser = new Usuario(username: 'me', password: 'password', pregunta: '1').save()
         SeguridadService.crearUsuarioRol(testUser,adminRole)
 
       /*  UsuarioRol.create testUser, adminRole
