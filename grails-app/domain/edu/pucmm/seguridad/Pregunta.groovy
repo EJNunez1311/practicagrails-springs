@@ -2,9 +2,9 @@ package edu.pucmm.seguridad
 
 class Pregunta {
 
-    String respuesta1
-    String respuesta2
-    String respuesta3
+    Integer respuesta1
+    Integer respuesta2
+    Integer respuesta3
     String respuesta4
     Usuario usuario
 

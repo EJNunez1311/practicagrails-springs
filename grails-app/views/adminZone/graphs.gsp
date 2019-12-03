@@ -21,15 +21,15 @@
         // instantiates the pie chart, passes in the data and
         // draws it.
         function drawChartPregunta1() {
-        <g:each in="${edu.pucmm.seguridad.Pregunta}" var="questions" status="i">
+            <g:each var="question" in="${pregunta}">
             // Create the data table.
             var data = new google.visualization.DataTable();
             data.addColumn('string', 'Calificacion');
             data.addColumn('number', 'Porcentaje');
             data.addRows([
-                ['¿Las charlas donde usted participó cumplieron con sus expectativas?', 1],
-                ['¿Los expositores mostraron tener dominio del tema?', 1],
-                ['¿Las instalaciones del evento fueron confortables para usted?', 2],
+                ['¿Las charlas donde usted participó cumplieron con sus expectativas?', ${pregunta.respuesta1.sum()}],
+                ['¿Los expositores mostraron tener dominio del tema?', ${pregunta.respuesta2.sum()}],
+                ['¿Las instalaciones del evento fueron confortables para usted?', ${pregunta.respuesta3.sum()}],
             ]);
             </g:each>
             // Set chart options
