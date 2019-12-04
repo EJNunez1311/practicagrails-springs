@@ -9,15 +9,15 @@
 <head>
     <title>Encuesta BarCamp</title>
 </head>
-
 <body>
+<g:include view="layouts/menu.gsp"/>
 <H1>Encuesta BarCamp</H1>
 <g:form controller="barcamp" action="save" >
-    <label>¿Las charlas donde usted participó cumplieron con sus expectativas? </label>
+    <label>¿Las charlas donde usted participó cumplieron con sus expectativas? (Calificación 1-5)</label>
     <g:textField name="respuesta1"/><br/>
-    <label>¿Los expositores mostraron tener dominio del tema?</label>
+    <label>¿Los expositores mostraron tener dominio del tema? (Calificación 1-5)</label>
     <g:textField name="respuesta2"/><br/>
-    <label>¿Las instalaciones del evento fueron confortables para usted?.</label>
+    <label>¿Las instalaciones del evento fueron confortables para usted? (Calificación 1-5)</label>
     <g:textField name="respuesta3"/><br/>
     <label> ¿Tiene algún comentario para los organizadores? (Comentario).</label>
     <g:textField name="respuesta4"/><br/>

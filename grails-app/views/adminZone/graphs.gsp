@@ -46,6 +46,7 @@
 </head>
 
 <body>
+<g:include view="layouts/menu.gsp"/>
 <!--Div that will hold the pie chart-->
 <div id="chart_pregunta1"></div>
 </body>

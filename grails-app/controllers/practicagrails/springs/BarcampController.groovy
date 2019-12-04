@@ -10,8 +10,8 @@ class BarcampController {
     def springSecurityService
     SaveEncuestaService saveEncuestaService
 
-
     def index() {
+        redirect(uri:"/Barcamp/encuentas")
     }
     def encuentas(){
 
@@ -20,6 +20,6 @@ class BarcampController {
         println "propiedades: "+params.properties
       def UsuarioActual = (Usuario) springSecurityService.getCurrentUser()
         saveEncuestaService.save(pregunta, UsuarioActual)
-        render "Success!"
+        render(view:"encuentas")
     }
 }
